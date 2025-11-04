@@ -8,18 +8,15 @@
 #     pointer_accel -0.6
 # }
 
-input type:keyboard {
-    xkb_layout us
-}
-
 # to find more options for input devices:
-# run `man 5 sway-output`
+# run `man 5 sway-output`.
 
+# setting the default wallpaper, can be found at sway directory of this repository.
 output * bg $config_path/default_wallpaper.jpg fill
 
 # this command is used to suspend the computer after some time.
-# after 900 seconds the screen will be black.
-# after 1200 seconds the screen will turn off.
+# after 900(15 minutes) seconds the screen will be black.
+# after 1200(20 minutes) seconds the screen will turn off.
 exec swayidle -w \
          timeout 900 'swaylock -f -c 000000' \
          timeout 1200 'swaymsg "output * power off"' \

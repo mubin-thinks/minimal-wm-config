@@ -1,2 +1,2 @@
-# enables waybar
+# enables waybar.
 bar swaybar_command waybar

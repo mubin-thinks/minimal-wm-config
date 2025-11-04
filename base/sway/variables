@@ -1,0 +1,20 @@
+# setting the font used by sway(e.g. in title bars)
+font fira code medium 12
+
+# this is the key used with other keys to control sway. you can change it to your
+# preference.
+# Mod4 means Windows Key
+# Mod1 means Alt key
+set $mod Mod4
+
+# home row direction keys, like vim.
+set $left h
+set $down j
+set $up k
+set $right l
+
+# your preferred terminal emulator.
+set $term alacritty
+
+# your preferred application launcher.
+set $menu tofi-drun --drun-launch=true

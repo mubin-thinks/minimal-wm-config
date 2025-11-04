@@ -1,0 +1,8 @@
+# only meant for voidlinux.
+# exec pipewire
+# exec pipewire-pulse
+
+# these auto-starts are needed for screen-sharing.
+exec --no-startup-id dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+exec --no-startup-id /usr/lib/xdg-desktop-portal-wlr
+exec --no-startup-id /usr/lib/xdg-desktop-portal -r

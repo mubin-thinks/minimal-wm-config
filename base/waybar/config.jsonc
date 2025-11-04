@@ -3,61 +3,70 @@
     "spacing": 0,
     "height": 0,
 
-    // you can change the margins to your liking.
     "margin-top": 0,
     "margin-right": 0,
     "margin-bottom": 0,
     "margin-left": 0,
 
-    "modules-left": [
+    "modules-left":
+    [
         "sway/workspaces"
     ],
 
-    "modules-center": [
+    "modules-center":
+    [
     ],
 
-    "modules-right": [
+    "modules-right":
+    [
         "tray",
         "battery",
         "network",
         "pulseaudio",
-        "clock",
+        "clock"
     ],
 
-    "sway/workspaces": {
+    "sway/workspaces":
+    {
         "disable-scroll": true,
         "all-outputs": true,
         "tooltip": false
     },
 
-    "tray": {
+    "tray":
+    {
         "spacing": 10,
         "tooltip": false
     },
 
-    "clock": {
-        "format": "{:%a %d, %I:%M %p}",
+    "clock":
+    {
+        "format": "{:%a  %Y-%m-%d  %I:%M %p}",
         "tooltip": false
     },
 
-    "battery": {
+    "battery":
+    {
         "format": "bat {capacity}%",
         "interval": 5,
-        "states": {
+        "states":
+        {
             "warning": 20,
             "critical": 10
         },
         "tooltip": false
     },
 
-    "network": {
+    "network":
+    {
         "format-wifi" : "wifi up",
-        "format-ethernet": "enth up",
+        "format-ethernet": "ethernet up",
         "format-disconnected" : "no network",
         "tooltip": false
     },
 
-    "pulseaudio": {
+    "pulseaudio":
+    {
         "scroll-step": 5,
         "max-volume": 150,
         "format": "vol {volume}%",

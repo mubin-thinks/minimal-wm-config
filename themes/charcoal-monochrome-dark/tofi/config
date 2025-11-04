@@ -1,0 +1,22 @@
+font = iosevka
+font-size = 14
+
+width = 400
+height = 400
+
+background-color = #120e08
+
+outline-width = 4
+outline-color = #120e08
+
+border-width = 2
+border-color = #a28a5f
+
+text-cursor = true
+text-cursor-style = underscore
+text-cursor-thickness = 4
+text-color = #a28a5f
+
+prompt-color = #bea77b
+input-color = #bea77b
+selection-color = #d3bd95

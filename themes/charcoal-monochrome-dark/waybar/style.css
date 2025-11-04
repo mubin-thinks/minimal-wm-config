@@ -1,0 +1,49 @@
+*
+{
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    font-family: "iosevka";
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0;
+}
+
+window#waybar
+{
+    background: #120e08;
+    border-bottom: 1px solid #b3976d;
+}
+
+#clock, #pulseaudio, #network, #tray, #battery
+{
+    margin: 8px 16px 8px 0px;
+    padding: 2px 0px 2px 0px;
+    color: #b3976d;
+}
+
+#workspaces
+{
+    margin: 8px 0px 8px 16px;
+    color: #b3976d;
+}
+
+#workspaces button
+{
+    all: initial;
+    padding: 2px 8px 2px 0px;
+    color: #8c734e;
+}
+
+#workspaces button.focused
+{
+    color: #d1b994;
+}
+
+#workspaces button.urgent,
+#battery.warning, #battery.critical, #battery.urgent
+{
+    background-color: #b3976d;
+    padding: 2px 8px;
+    color: #120e08;
+}

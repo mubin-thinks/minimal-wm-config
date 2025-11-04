@@ -1,6 +1,5 @@
-# you can "split" the current object in focus with
-# $mod+b or $mod+v, for horizontal and vertical splits
-# respectively.
+# you can "split" the current object in focus with $mod+b or $mod+v, for horizontal and
+# vertical splits respectively.
 bindsym $mod+b splith
 bindsym $mod+v splitv
 
