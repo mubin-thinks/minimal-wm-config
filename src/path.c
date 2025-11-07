@@ -36,9 +36,9 @@ void path_exists(const char *path)
     struct stat st;
     if (stat(path, &st))
     {
-        return true;
+        return false;
     }
-    return false;
+    return true;
 }
 
 void path_create_directory(const char *path)
