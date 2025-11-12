@@ -16,4 +16,4 @@ client.urgent           #b3976d #d1b994 #120e08 #655030  #b3976d
 default_border pixel 1
 
 # the gaps in between to windows in tiling mode
-gaps inner 6
+gaps inner 8

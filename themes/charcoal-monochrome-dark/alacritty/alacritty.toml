@@ -33,5 +33,5 @@ style = "medium"
 program = "/bin/fish"
 
 [window.padding]
-x = 24
-y = 24
+x = 32
+y = 32

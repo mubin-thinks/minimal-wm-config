@@ -12,7 +12,7 @@
 window#waybar
 {
     background: #120e08;
-    border-bottom: 1px solid #b3976d;
+    border: 1px solid #b3976d;
 }
 
 #clock, #pulseaudio, #network, #tray, #battery
