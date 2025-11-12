@@ -2,7 +2,7 @@
 
 set -g base_dir base
 set -g themes_dir themes
-set -g config_dir $HOME/config
+set -g config_dir $HOME/.config
 set -g themes
 
 for theme in (/bin/ls $themes_dir)
@@ -27,10 +27,12 @@ end
 
 for config in (/bin/ls $base_dir)
     if test -d $config_dir/$config
+        echo "removing $config_dir/$config/*"
         rm -fr $config_dir/$config/*
     else
         mkdir -p $config_dir/$config
     end
+    echo "copying $base_dir/$config/* -> $config_dir/$config"
     cp -r $base_dir/$config/* $config_dir/$config/
 end
 
@@ -42,10 +44,12 @@ end
 for config in (/bin/ls $themes_dir/$_flag_theme)
     if test -d $config_dir/$config
         if not contains $config $base_dir_items
+            echo "removing $config_dir/$config/*"
             rm -fr $config_dir/$config/*
         end
     else
         mkdir $config_dir/$config
     end
+    echo "copying $themes_dir/$_flag_theme/$config/* -> $config_dir/$config"
     cp -r $themes_dir/$_flag_theme/$config/* $config_dir/$config/
 end
