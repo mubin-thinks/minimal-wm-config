@@ -11,6 +11,10 @@ end
 
 function print_usage
     echo "usage: installer --theme <theme-name>" >&2
+    echo "options:"
+    echo "    -t,--theme <theme-name>        provide theme theme you want to install."
+    echo "    -u,--usage,-h,--help           show this help message and exit."
+    echo ""
     echo "available themes are:" >&2
     for theme in $themes
         echo "    * $theme"
@@ -22,7 +26,11 @@ argparse "h/help" "u/usage" "t/theme=" -- $argv
 if set -ql _flag_help; or set -ql _flag_usage; or not set -ql _flag_theme; \
     or not contains $_flag_theme $themes
     print_usage
-    exit 255
+    if set -ql _flag_help; or set -ql _flag_usage
+        exit 0
+    else
+        exit 255
+    end
 end
 
 for config in (/bin/ls $base_dir)

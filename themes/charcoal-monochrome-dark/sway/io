@@ -8,13 +8,14 @@
 #     pointer_accel -0.6
 # }
 
-# to find more options for input devices:
-# run `man 5 sway-output`.
-
-# setting the default wallpaper, can be found at sway directory of this repository.
-output * bg $config_path/default_wallpaper.jpg fill
+# setting a solid background color. if you want to change it to a wallpaper replace the
+# hex color with the path to wallpaper and replace "solid_color" with "fill".
+#
+# for more info, run `man 5 sway-output`
+output * bg #786958 solid_color
 
 # this command is used to suspend the computer after some time.
+
 # after 900(15 minutes) seconds the screen will be black.
 # after 1200(20 minutes) seconds the screen will turn off.
 exec swayidle -w \
