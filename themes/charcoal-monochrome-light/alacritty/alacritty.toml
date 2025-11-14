@@ -1,0 +1,36 @@
+[colors.primary]
+background = '#c9ba96'
+foreground = '#4a3c25'
+
+[colors.normal]
+black   = '#150f05'
+white   = '#bcab85'
+red     = '#2e2412'
+green   = '#4a3c25'
+blue    = '#4a3c25'
+yellow  = '#2e2412'
+cyan    = '#4a3c25'
+magenta = '#695a40'
+
+[colors.bright]
+black   = '#2e2412'
+white   = '#c9ba96'
+red     = '#150f05'
+green   = '#2e2412'
+blue    = '#2e2412'
+yellow  = '#150f05'
+cyan    = '#2e2412'
+
+[font]
+size = 14
+
+[font.normal]
+family = "iosevka"
+style = "medium"
+
+[terminal.shell]
+program = "/bin/fish"
+
+[window.padding]
+x = 32
+y = 32

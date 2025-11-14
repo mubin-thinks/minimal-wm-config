@@ -7,13 +7,13 @@
 # indicator = indicator color.
 # child_border = border color around the window view-port.
 # class                 border  backgr. text    indicat. child_border
-client.focused          #d1b994 #b3976d #120e08 #655030  #d1b994
-client.focused_inactive #8c734e #655030 #120e08 #2a2012  #8c734e
-client.unfocused        #8c734e #655030 #120e08 #2a2012  #8c734e
-client.urgent           #b3976d #d1b994 #120e08 #655030  #b3976d
+client.focused          #150f05 #2e2412 #bcab85 #695a40  #150f05
+client.focused_inactive #695a40 #4a3c25 #bcab85 #2e2412  #695a40
+client.unfocused        #695a40 #4a3c25 #bcab85 #2e2412  #695a40
+client.urgent           #150f05 #150f05 #bcab85 #695a40  #150f05
 
 # the default border size
-for_window [app_id=".*"] border pixel 1
+for_window [app_id=".*"] border pixel 2
 
 # the gaps in between to windows in tiling mode
 gaps inner 8
