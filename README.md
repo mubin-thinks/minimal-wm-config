@@ -4,7 +4,7 @@
 **[Preview] | [Basic Keybinds] | [Install] | [Contribute]**
 </div>
 
-[Preview]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#preview
+[Preview]: https://github.com/mubin-thinks/minimal-wm-config/blob/master/showcases.md
 [Basic Keybinds]: https://github.com/mubin-thinks/minimal-wm-config/?tab=readme-ov-file#basic-keybinds
 [Install]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#install-automated
 [Contribute]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#contributing
