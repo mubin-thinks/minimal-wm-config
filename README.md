@@ -1,13 +1,12 @@
 <div align="center">
     <h1><code>minimal-wm-config</code></h1>
 
-**[Preview] | [Basic Keybinds] | [Dependencies] | [Install] | [Contribute]**
+**[Preview] | [Basic Keybinds] | [Install] | [Contribute]**
 </div>
 
 [Preview]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#preview
 [Basic Keybinds]: https://github.com/mubin-thinks/minimal-wm-config/?tab=readme-ov-file#basic-keybinds
-[Dependencies]: https://github.com/mubin-thinks/minimal-wm-config/?tab=readme-ov-file#dependencies
-[Install]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#install
+[Install]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#install-automated
 [Contribute]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#contributing
 
 ## About
@@ -48,7 +47,8 @@ keyboards.
 There are more keybinds then listed here. If you are interested on those, then take a
 look at files ending with `_keybinds` in the `~/.config/sway` directory.
 
-## Dependencies
+## Install (Automated)
+### Dependencies
 ```bash
 # ARCH LINUX
 $ yay -Sy sway swaybg swaylock swayidle alacritty fish waybar eza grim slurp tofi
@@ -63,13 +63,13 @@ $ sudo apt install sway swaybg swaylock swayidle alacritty fish waybar eza grim 
 
 ### Installing the font
 The configuration uses the [Iosevka](https://github.com/be5invis/Iosevka) font. You can
-download it from [here](https://github.com/be5invis/Iosevka/releases/tag/latest). After
+download it from [here](https://github.com/be5invis/Iosevka/releases/latest). After
 you have downloaded and unzipped the file, run the following command to install it:
 ```bash
 $ mv *.ttf /usr/share/fonts/TTF
 ```
 
-## Install (Automated)
+### Installation
 > [!WARNING]
 > This method will automatically delete your old configurations. If you care about them,
 > make sure to back them up before running the script.
