@@ -18,13 +18,6 @@ can be used as base for other configurations.
 minimal-wm-config is very simply written for clarity and to avoid complexity. The goal
 is to write as little configuration as possible to make window managers exquisite.
 
-<div>
-<br>
-<img
-src="https://github.com/mubin-thinks/minimal-wm-config/blob/master/readme_res/preview.jpg?raw=true"
-alt="preview image">
-</div>
-
 ## Basic Keybinds
 The `super` key is the Windows key on traditional keyboards. And the Command Key on Mac
 keyboards.
