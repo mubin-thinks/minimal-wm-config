@@ -4,11 +4,11 @@
 **[Preview] | [Basic Keybinds] | [Dependencies] | [Install] | [Contribute]**
 </div>
 
-[Preview]: https://github.com/mubin6th/minimal-wm-config?tab=readme-ov-file#preview
-[Basic Keybinds]: https://github.com/mubin6th/minimal-wm-config/?tab=readme-ov-file#basic-keybinds
-[Dependencies]: https://github.com/mubin6th/minimal-wm-config/?tab=readme-ov-file#dependencies
-[Install]: https://github.com/mubin6th/minimal-wm-config?tab=readme-ov-file#install
-[Contribute]: https://github.com/mubin6th/minimal-wm-config?tab=readme-ov-file#contributing
+[Preview]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#preview
+[Basic Keybinds]: https://github.com/mubin-thinks/minimal-wm-config/?tab=readme-ov-file#basic-keybinds
+[Dependencies]: https://github.com/mubin-thinks/minimal-wm-config/?tab=readme-ov-file#dependencies
+[Install]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#install
+[Contribute]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#contributing
 
 ## About
 minimal-wm-config is a configuration for window managers in Linux. It contains
@@ -22,40 +22,43 @@ is to write as little configuration as possible to make window managers exquisit
 <div>
 <br>
 <img
-src="https://github.com/mubin6th/minimal-wm-config/blob/master/readme_res/preview.jpg?raw=true"
+src="https://github.com/mubin-thinks/minimal-wm-config/blob/master/readme_res/preview.jpg?raw=true"
 alt="preview image">
 </div>
 
 ## Basic Keybinds
-The Super key is the Windows key on traditional keyboards. And the Command Key on Mac
+The `super` key is the Windows key on traditional keyboards. And the Command Key on Mac
 keyboards.
 
-- **Super+Enter**: Open Terminal (alacritty).
-- **Super+d**: Open Launcher (bemenu).
-- **Super+s**: Take Screenshot (Drag with cursor to select section, screenshots will be saved at `$HOME/Pictures`).
-- **Super+<h,j,k,l or arrow keys>**: Focus on left, bottom, top, right tiled windows respectively.
-- **Super+Shift+<h,j,k,l or arrow keys>**: Swap with focused window on left, bottom, top, right tiled windows respectively.
-- **Super+f**: Make focused window full-screen.
-- **Super+Shift+v**: Turn focused window floating or turn focus floating window tiled.
-- **Super+<mouse left click + drag>**: Move the focused floating window.
-- **Super+<mouse right click + drag>**: Resize the focused floating window.
-- **Super+Shift+q**: Close the focused window.
-- **Super+m**: Exit Sway.
+| Keybind | Action | Description |
+| --- | --- | --- |
+| `super+enter` | Open terminal | Opens the Alacritty Terminal. |
+| `super+q` | Close a program | Terminates the focused window and program if the program does not run in background. |
+| `super+d` | Open Launcher | Opens the Tofi Application Launcher. |
+| `super+s` | Take Screenshot | Take screenshot of a selected portion with `grim` and `slurp` programs. |
+| `super+<h,j,k,l or arrow keys>` |  Focus window in tiling mode | Focus window in given direction. |
+| `super+shift+<h,j,k,l or arrow keys>` | Swap with window | Swap with a tiling window within a tiling window in given direction. |
+| `super+space` | Swap focus with tiling and floating windows | Change focus from a tiling window to a floating window(if any) and vise-versa. |
+| `super+f` | Fullscreen current window | Fullscreen the currently focused window. |
+| `super+shift+f` | Turn window mode to floating | Turn the focused window's mode to tiling to floating or vise-versa. |
+| `super+<mouse left click + move mouse>` | Move tiling or floating window position | In floating mode, change the window's position. In tiling mode swap with other window. |
+| `super+<mouse right click + move mouse>` | Resize tiling or floating window | In floating mode, change the window's size. In tiling mode resize focused and other adjacent windows accordingly. |
+| `super+m` | Exit Window Manager | Terminate window manager. The computer goes to login display manager or TTY terminal. |
 
 There are more keybinds then listed here. If you are interested on those, then take a
-look at files ending with `_keybinds` in the `sway/` directory.
+look at files ending with `_keybinds` in the `~/.config/sway` directory.
 
 ## Dependencies
 ```bash
 # ARCH LINUX
-$ yay -Sy sway swaybg swayidle alacritty fish waybar eza grim slurp bemenu
+$ yay -Sy sway swaybg swaylock swayidle alacritty fish waybar eza grim slurp tofi
 
 # VOID LINUX
-$ sudo xbps-install -S sway swaybg swayidle alacritty fish-shell Waybar eza grim slurp bemenu
+$ sudo xbps-install -S sway swaybg swaylock swayidle alacritty fish-shell Waybar eza grim slurp tofi
 
-# DEBIAN LINUX (eza(is required) not available)
+# DEBIAN LINUX (tofi needs to be built from source)
 $ sudo apt update
-$ sudo apt install sway swaybg swayidle alacritty fish waybar grim slurp bemenu
+$ sudo apt install sway swaybg swaylock swayidle alacritty fish waybar eza grim slurp
 ```
 
 ### Installing the font
@@ -66,31 +69,30 @@ you have downloaded and unzipped the file, run the following command to install 
 $ mv *.ttf /usr/share/fonts/TTF
 ```
 
-## Install
-After cloning the repository, there are 2 methods to install minimal-wm-config.
-
-### Automated
+## Install (Automated)
 > [!WARNING]
-> This method will automatically delete your old configurations. If
-> you care about them, make sure to back them up before running the
-> script.
+> This method will automatically delete your old configurations. If you care about them,
+> make sure to back them up before running the script.
 
 This installation process is automated with `install.fish`. Make sure you have `fish`
-shell installed. If so, `cd` into the project and run
-the script with:
-``` fish
-$ fish install.fish
+shell installed. If so, `cd` into the project. Now, you shall list the themes available
+to minimal-wm-config. You can do so with this command:
+```fish
+$ ./install.fish -h
 ```
 
-The Neovim configuration is not copied by default. You shall copy it manually.
-
-### Manual
-If you want to install minimal-wm-config manually, just copy the
-configuration folders (i.e. `alacritty`, `fastfetch`, `fish`, `sway`,
-`waybar` and optionally `nvim`) to your config folder.
+Then, add the theme's name you like to the following command:
+``` fish
+$ ./install.fish -t <theme name>
+```
 
 ## Contributing
-If you would like to add features or report any bug, make an `issue`. Pull Requests are
-also welcome!
+If you encounter any bug or want to suggest change/improvement, create an issue.
 
-Thanks to everyone using and improving minimal-wm-config.
+
+If you wish to contribute/create Pull Requests, feel free to do so. I will review them
+and make proper changes(typos, code-style etc.) before merging with upstream.
+
+
+Currently minimal-wm-config supports few themes and it should be increased. If you are
+not sure where to contribute to, you can focus in this section.
