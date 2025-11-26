@@ -1,11 +1,12 @@
 <div align="center">
     <h1><code>minimal-wm-config</code></h1>
 
-**[Preview] | [Basic Keybinds] | [Install] | [Contribute]**
+**[Preview] | [Basic Keybinds] | [Docs] | [Install] | [Contribute]**
 </div>
 
 [Preview]: https://github.com/mubin-thinks/minimal-wm-config/blob/master/showcases.md
 [Basic Keybinds]: https://github.com/mubin-thinks/minimal-wm-config/?tab=readme-ov-file#basic-keybinds
+[Docs]: https://github.com/mubin-thinks/minimal-wm-config/wiki
 [Install]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#install-automated
 [Contribute]: https://github.com/mubin-thinks/minimal-wm-config?tab=readme-ov-file#contributing
 
@@ -76,7 +77,7 @@ $ ./install.fish -h
 
 Then, add the theme's name you like to the following command:
 ``` fish
-$ ./install.fish -t <theme name>
+$ ./install.fish -t <theme-name>
 ```
 
 ## Contributing

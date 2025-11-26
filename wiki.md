@@ -77,19 +77,41 @@ input type:pointer
 ```
 
 ## Changing overall font and font-size
-_todo_
+To change the font and font-size of the system, we will have to edit configurations of
+window-manager, status-line, app-launcher and terminal. The specific files that needs to
+be edited are listed here:
+- `~/.config/sway/variables` (for window-manager)
+- `~/.config/waybar/style.css` (for status-line)
+- `~/.config/tofi/config` (for application launcher)
+- `~/.config/alacritty/alacritty.toml` (for terminal)
+
+In these file look for lines with font. And change the provided family(Iosevka) to your
+chosen font family. And look for lines related to font size and change the value of size
+accordingly.
+
+As the font specification is independent of other programs. You can have different font
+for different elements of your system. (i.e. different fonts for status-line and terminal
+etc.)
 
 
 ## Editing wallpaper to match theme
-_todo_
+gowall is a popular program to match wallpaper with system theme. Install gowall from
+gowall's docs, linked [here](https://achno.github.io/gowall-docs/installation).
 
+We can now select our favourite theme from this command: `gowall list`. After you've
+chosen your favourite theme, run the following command to apply it to a wallpaper:
+```
+$ gowall convert <path/to/image> -t <theme-name>
+```
+
+The wallpaper will be located at `~/Pictures/gowall/`.
 
 ## Configuring Firefox to match theme
 To add a custom theme to match Firefox with system's theme, we use an add-on called
 [Firefox Color](https://addons.mozilla.org/en-US/firefox/addon/firefox-color/). After
 you've installed the add-on, we can add a custom theme.
 
-Open the extension and move to the "Custom Colors" Tab. From there, we will apply colors
+Open the extension and move to the "Custom colors" Tab. From there, we will apply colors
 for specific themes. The colors of the elements are given below:
 ### Charcoal Monochrome Dark
 ```
@@ -121,4 +143,24 @@ After you've set all the options, you can then save the theme from the top-right
 "save" button. The saved themes will be located at "Saved themes" tab.
 
 ## Changing gaps between windows and status-line
-_todo_
+The gaps of windows and status-line are controlled by sway(window-manager) and waybar
+(status-line). We have to edit `~/.config/sway/borders_and_gaps` and
+`~/.config/waybar/config.jsonc`. The lines you have to edit are below:
+### For sway:
+```
+gaps inner x
+```
+Here you can set `x` to any positive number you like. There is also `gaps outer x` which
+will set `x` unit of gap around the windows but not in between them. You can add it below
+`gaps inner`.
+
+For more configuration options, check `man 5 sway`.
+
+### For waybar:
+```
+    "margin-top": x,
+    "margin-left": x,
+    ...
+```
+You can set `x` to any positive number you like and each margin side can be of different
+values.
