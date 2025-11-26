@@ -25,13 +25,13 @@ programs work in Linux.
 Linux uses "configuration files" to configure software. The software itself looks at
 the config files and changes the settings accordingly. There's a common location where
 softwares in Linux usually look at to find them. In Linux the directory is at
-`$HOME/.config`. Here the `$HOME` is a environment variable that points to /home/<user> or
-the directory that is usually selected as default directory for terminals on startup.
+`$HOME/.config`. Here the `$HOME` is a environment variable that points to `/home/<user>`
+or the directory that is usually selected as default directory for terminals on startup.
 `$HOME` is sometimes also referred to as `~`(tilde character).
 
 Before we edit any config files. We must make sure we have a text editor. You can choose
 your favourite text editor for this. Most popular text-editor of today are: Neovim, Emacs,
-Nano, VScode and Sublime Text. But you can choose what-ever text editor your prefer.
+Nano, VScode and Sublime Text. But you can choose whatever text editor your prefer.
 
 ## Changing the wallpaper
 The wallpaper configuration falls on window-managers. So we have to tell/configure
